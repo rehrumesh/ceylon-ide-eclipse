@@ -42,43 +42,9 @@ public class JoinIfStatementProposal {
                     ws = getDefaultLineDelimiter(doc) + getIndent(is, doc);
                     indent = getDefaultIndent();  
                     
-//                    change.addEdit(new ReplaceEdit(c1.getStopIndex()+1, 
-//                            c2.getStartIndex()-c1.getStopIndex()-1, 
-//                            ") {" + ws + indent + "if ("));
-//                    change.addEdit(new InsertEdit(is.getStopIndex()+1, ws + "}"));
-//                    if (!indent.isEmpty()) {
-//                        try {
-//                            for (int line = doc.getLineOfOffset(cl.getStopIndex())+1;
-//                                    line <= doc.getLineOfOffset(is.getStopIndex()); 
-//                                    line++) {
-//                                change.addEdit(new InsertEdit(doc.getLineOffset(line), indent));
-//                            }
-//                        }
-//                        catch (Exception e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
                     
-                    /*Tree.ConditionList cl = is.getIfClause().getConditionList();
-                    if (cl!=null) {
-                        List<Tree.Condition> conditions = cl.getConditions();
-                        if(conditions.size()>0){
-                        	Tree.Condition rootIfFinalCondition = conditions.get(conditions.size()-1);                        	
-                        	Tree.Condition firstInnerIfcondition =innerIs.getIfClause().getConditionList().getConditions().get(0);
-                        	//int lineLength=0;
-	                        //try{
-	                        //	lineLength = doc.getLineLength(doc.getLineOfOffset(is.getStopIndex()));
-	                        //}
-	                        //catch (Exception e) {
-	                        //    e.printStackTrace();
-	                        //}
-                        	//int length = lineLength -rootIfFinalCondition.getStopIndex()-1 +firstInnerIfcondition.getStartIndex();
-                        	//innerIs.getIfClause().getExpression().
-                        	
-                        	change.addEdit(new ReplaceEdit(rootIfFinalCondition.getStopIndex()+1, 0,", "+innerIs.getIfClause().getExpression().getText()+""));
-                        }                        
-                    }*/
-                    System.out.println("Bummmmmmmmmmmmmmmmm");
+                    //TO-DO: add the code change editing code.
+                    
                     proposals.add(new CorrectionProposal("Join if statements", change, null));
 				}
 			}
